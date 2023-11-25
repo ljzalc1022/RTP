@@ -78,6 +78,12 @@ int Open(const char *pathname, int flags)
     if (re == -1) perror("open");
     return re;
 }
+int Open3(const char *pathname, int flags, mode_t mode)
+{
+    int re = open(pathname, flags, mode);
+    if (re == -1) perror("open");
+    return re;
+}
 int Close(int fd)
 {
     int re = close(fd);

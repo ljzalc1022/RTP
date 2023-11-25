@@ -119,7 +119,7 @@ int main(int argc, char **argv) {
 
     LOG_DEBUG("Receiver: transmissing data\n");
     
-    int file = Open(filePath, O_WRONLY | O_CREAT);
+    int file = Open3(filePath, O_WRONLY | O_CREAT, S_IRWXU | S_IRWXG | S_IRWXO);
     while (true)
     {
         r = Epoll_wait(epfd, &ev, 1, WAIT_TIME);

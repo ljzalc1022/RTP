@@ -21,6 +21,7 @@ int Timerfd_settime(int fd, int flags,
                     struct itimerspec *old_value);
 
 int Open(const char *pathname, int flags);
+int Open3(const char *pathname, int flags, mode_t mode);
 int Close(int fd);
 
 #endif // MYLIB_H
