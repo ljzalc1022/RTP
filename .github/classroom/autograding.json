@@ -199,6 +199,66 @@
       "comparison": "exact",
       "timeout": 1,
       "points": 10
+    },
+    {
+      "name": "NORMAL_HUGE_WINDOW",
+      "setup": "",
+      "run": "./test/runtest.sh NORMAL_HUGE_WINDOW",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "NORMAL_OPT_HUGE_WINDOW",
+      "setup": "",
+      "run": "./test/runtest.sh NORMAL_OPT_HUGE_WINDOW",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "OPT_RECEIVER_MIXED_3",
+      "setup": "",
+      "run": "./test/runtest.sh OPT_RECEIVER_MIXED_3",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "OPT_RECEIVER_MIXED_4",
+      "setup": "",
+      "run": "./test/runtest.sh OPT_RECEIVER_MIXED_4",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "OPT_SENDER_MIXED_3",
+      "setup": "",
+      "run": "./test/runtest.sh OPT_SENDER_MIXED_3",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "OPT_SENDER_MIXED_4",
+      "setup": "",
+      "run": "./test/runtest.sh OPT_SENDER_MIXED_4",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 10
     }
   ]
 }
