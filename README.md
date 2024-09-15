@@ -37,3 +37,43 @@ RTP works with a constant congestion window specifying the maxium number of flyi
 
 - `lib/mylib.c, lib/mylib.h` - error handling of system calls
 - `lib/rio.c, lib/rio.h` - robust IO implementation
+
+## How to try it out 
+
+This project aims to operate on the Linux system and is tested on Ubuntu 22.04.
+
+To build this project 
+
+```bash
+mkdir build && cd build 
+cmake ..
+cmake --build .
+```
+
+This should produce two executables `sender` and `receiver` under the `build` directory.
+
+To use RTP to send a file over a reliable connection
+
+```bash
+./receiver <listen-port> <file-path> <window-size> <mode>  # start receiver first
+./sender <receiver-ip> <receiver-port> <file-path> <windows-size> <mode> 
+```
+
+Remarks
+- the maxium acceptable window is 20000 (configured in `src/rtp.h`)
+- The `window-size` and `mode` arguments should be the same for the protocol to function correctly
+
+### To run the official test
+
+To run the official test suits (which injects duplicated packets, packet loss, etc.), first download the official receiver and sender
+
+```bash
+git submodule init
+git submodule update
+```
+
+Then build the project and run the local test
+
+```bash
+./rtp_test_all
+```
